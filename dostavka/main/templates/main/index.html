@@ -1,0 +1,30 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Отследить заказ{% endblock %}
+
+{% block content %}
+<div class="content">
+    <p class="textheader">Поиск заказа</p>
+    <form action="{% url 'home' %}" class="formsearch">
+        <input class="search" type="search" name="query" placeholder="Введите адрес почты через которую оформлялся заказ">
+        <button class="buttosearch" type="submit">Найти заказ</button>
+    </form>
+     <div class="databox">
+     <p class="textheader">Данные о заказе</p>
+    {% if order %}
+    {% for i in order %}
+         <p class="tovartext tovartexttittle">Отправтель: {{i.sender}}</p>
+         <p class="tovartext tovartexttittle">Адрес отправителя: {{i.senders_address}}</p>
+         <p class="tovartext tovartexttittle">Отправленный товар: {{i.shipped_item}}</p>
+         <p class="tovartext tovartexttittle">ФИО клиента: {{i.FIO}}</p>
+         <p class="tovartext tovartexttittle">Email клиента: {{i.email}}</p>
+         <p class="tovartext tovartexttittle">Номер телефона: {{i.phone_number}}</p>
+         <p class="tovartext tovartexttittle">Адрес получателя: {{i.address_recipient}}</p>
+         <hr>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p>Данные отсутствуют</p>
+  {% endif %}
+</div>
+{% endblock %}

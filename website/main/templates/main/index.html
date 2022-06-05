@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="content">
+  {% if tovar %}
+    {% for i in tovar %}
+    <div class="tovar">
+        <img class="image" src="{{MEDIA_URL}}{{i.image.url}}" alt="image">
+        <p class="tovartext tovartexttittle">{{i.title}}</p>
+        <p class="tovartext">{{i.price}} руб.</p>
+        <button class="tovarbutton" onclick="document.location='order/{{i.id}}'" type="submit">Купить</button>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p>Товары отсутсвуют</p>
+  {% endif %}
+</div>
+{% endblock %}
+

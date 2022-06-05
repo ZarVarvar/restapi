@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@600&display=swap');
+
+body, html{
+    width:100%;
+    height:100%;
+}
+
+.conteiner{
+    max-width: 966px;
+    min-height: 100%;
+    background: #F0F0F0;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/*Шапка начало*/
+.contentheader{
+    margin-bottom: 25px;
+}
+
+.logo{
+    display: inline-block;
+    margin-right:40px;
+}
+
+.textheader{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 24px;
+    line-height: 5px;
+}
+
+.formsearch{
+    display:inline-block;
+    margin 0, auto;
+}
+
+.buttosearch{
+    height: 21px;
+    background: linear-gradient(180deg, #C85454 0%, #A30000 100%);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.search{
+    width: 460px;
+    height: 21px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+}
+.databox{
+margin: 15px 0px 0px 0px;
+}
+.hr{
+weight: 100px;
+size: 2px;
+color: block;
+}
+/*Шапка конец*/
+/*Подвал начало*/
+.podval{
+    margin:0 auto;
+    padding:30px;
+    max-width: 966px;
+    height: 189px;
+    background: linear-gradient(180deg, #C85454 0%, #A30000 100%);
+}
+
+.podvaltext{
+    display: inline-table;
+    margin: 0 150px 0 0;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color:white;
+}
+/*Подвал конец*/
+
